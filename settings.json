@@ -7,11 +7,13 @@
 			"runlevel": {
 				"godmode": 0,
 				"youtube": 0,
+                                "soundcloud": 0,
 				"sanitize": 3,
 				"joke": 0,
 				"fact": 0,
 				"backflip": 0,
 				"color": 0,
+			        "think": 0,
 				"asshole": 0,
 				"triggered": 0,
 				"linux": 0,
@@ -45,12 +47,14 @@
 			"runlevel": {
 				"godmode": 0,
 				"youtube": 0,
+			        "soundcloud": 0,
 				"sanitize": 3,
 				"joke": 0,
 				"fact": 0,
 				"backflip": 0,
 				"color": 0,
 				"asshole": 0,
+			        "think": 0,
 				"triggered": 0,
 				"linux": 0,
 				"pitch": 0,
@@ -106,7 +110,8 @@
 		"pink",
 		"cyan",
 		"orange",
-		"yellow"
+		"yellow",
+		"daniel"
 	],
 	"banLength": 1440,
 	"port": 3000,
