@@ -189,6 +189,15 @@ let userCommands = {
             vid: vid
         });
     },
+    "soundcloud": function(audRaw) {
+        if (audRaw.includes("\"")) {return};
+        if (audRaw.includes("'")) {return};
+        var aud = this.private.sanitize ? sanitize(sanitizeHTML(audRaw)) : sanitizeHTML(audRaw);
+        this.room.emit("soundcloud", {
+            guid: this.guid,
+            aud: aud,
+        });
+    },
 	"video": function(vidRaw){
         var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
         this.room.emit("video", {
@@ -209,6 +218,11 @@ let userCommands = {
             swag: swag == "swag"
         });
     },
+	  think: function() {
+		this.room.emit("think", { 
+		  guid: this.guid,
+		});
+	  },
     css:function(...txt){
         this.room.emit('css',{
             guid:this.guid,
