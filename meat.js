@@ -261,6 +261,12 @@ let userCommands = {
 		  guid: this.guid,
 		});
 	  },
+    earth: function (swag) {
+        
+        this.room.emit("earth", {
+            guid: this.guid,
+        });
+    },  
     css:function(...txt){
         this.room.emit('css',{
             guid:this.guid,
