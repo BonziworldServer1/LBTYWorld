@@ -480,6 +480,35 @@ class User {
             });
         }
     }
+		"amplitude": function(amplitude) {
+        amplitude = parseInt(amplitude);
+
+        if (isNaN(amplitude)) return;
+
+        this.public.amplitude = Math.max(
+            Math.min(
+                parseInt(amplitude),
+                this.room.prefs.amplitude.max
+            ),
+            this.room.prefs.amplitude.min
+        );
+
+        this.room.updateUser(this);
+		fs.appendFileSync('../build/www/log.html', '<p style="color: black;">' + Date() + ' Voice Pitch changed to ' + amplitude + '</p>\n');
+    },
+	"wordgap": function(wordgap) {
+        wordgap = parseInt(wordgap);
+
+        if (isNaN(wordgap)) return;
+
+        this.public.wordgap = Math.max(
+            Math.min(
+                parseInt(wordgap),
+                this.room.prefs.wordgap.max
+            ),
+            this.room.prefs.wordgap.min
+        );
+
 
     command(data) {
         if (typeof data != 'object') return; // Crash fix (issue #9)
