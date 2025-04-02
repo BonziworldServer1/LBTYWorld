@@ -29,14 +29,24 @@
 			"room_max": 100000,
 			"owner": null,
 			"pitch": {
-				"max": 125,
-				"min": 15,
+				"max": 50000,
+				"min": -50000,
 				"default": "random"
 			},
 			"speed": {
-				"max": 275,
-				"min": 125,
-				"default": "random"
+				"max": 50000,
+				"min": -50000,
+				"default": 0
+			},
+			"amplitude": {
+				"max": 10000000000,
+				"min": -10000000000,
+				"default": 100
+			},
+			"wordgap": {
+				"max": 1000,
+				"min": -1000,
+				"default": 0
 			},
 			"defaultName": "Anonymous"
 		},
@@ -68,15 +78,25 @@
 			},
 			"room_max": 100000,
 			"owner": null,
-			"pitch": {
-				"max": 125,
-				"min": 15,
+						"pitch": {
+				"max": 50000,
+				"min": -50000,
 				"default": "random"
 			},
 			"speed": {
-				"max": 275,
-				"min": 125,
-				"default": "random"
+				"max": 50000,
+				"min": -50000,
+				"default": 0
+			},
+			"amplitude": {
+				"max": 10000000000,
+				"min": -10000000000,
+				"default": 100
+			},
+			"wordgap": {
+				"max": 1000,
+				"min": -1000,
+				"default": 0
 			},
 			"defaultName": "Anonymous"
 		}
