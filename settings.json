@@ -35,7 +35,6 @@
                                 "soundcloud": 0,
 			        "scratch": 0,
 			        "think": 0,
-                                "earth": 0, 
 				"pope": 3
 			},
 			"room_max": 100000,
@@ -88,8 +87,6 @@
 																"soundcloud": 0,
 							"scratch": 0,
 							"think": 0,
-																"earth": 0, 
-				"pope": 3
 				"pope": 3
 			},
 			"room_max": 100000,
