@@ -347,6 +347,16 @@ let userCommands = {
 };
 
 
+    "startyping": function(swag) {
+        this.room.emit("typing", {
+            guid: this.guid
+        });
+    },
+    "stoptyping": function(swag) {
+        this.room.emit("stoptyping", {
+            guid: this.guid
+        });
+    },
 class User {
     constructor(socket) {
         this.guid = Utils.guidGen();
@@ -497,7 +507,7 @@ class User {
     talk(data) {
         if (typeof data != 'object') { // Crash fix (issue #9)
             data = {
-                text: "HEY EVERYONE LOOK AT ME I'M TRYING TO SCREW WITH THE SERVER LMAO"
+                text: "HEY EVERYONE LOOK AT ME I'M TRYING TO FREAK WITH THE LBTYWORLD LMAO"
             };
         }
 
