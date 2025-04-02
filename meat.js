@@ -38,6 +38,27 @@ var settingsSantize = {
     allowedSchemesAppliedToAttributes: ["href", "src", "cite"],
     allowProtocolRelative: false,
 };
+var stickers = {
+    sex: "the sex sticker has been removed",
+    sad: "so sad",
+    bonzi: "BonziBUDDY",
+    host: "host is a bathbomb",
+    spook: "ew im spooky",
+    forehead: "you have a big forehead",
+    ban: "i will ban you so hard right now",
+    flatearth: "this is true, and you cant change my opinion loser",
+    swag: "look at my swag",
+    topjej: "toppest jej",
+    cyan: "cyan is yellow",
+    no: "fuck no",
+    bye: "bye i'm fucking leaving",
+    kiddie: "kiddie",
+    big_bonzi: "you picked the wrong room id fool!",
+    lol: "lol",
+    flip: "fuck you",
+    sans: "fuck you",
+    crybaby: "crybaby",
+};
 const log = require("./log.js").log;
 const Ban = require("./ban.js");
 const Utils = require("./utils.js");
@@ -211,6 +232,15 @@ let userCommands = {
             guid: this.guid,
             vid: vid
         });
+    },
+    "sticker": function(sticker){
+        if(Object.keys(stickers).includes(sticker)){
+            this.room.emit('talk',{
+                text:`<img src="./img/stickers/${sticker}.png" width=170 height=170>`,
+                say:stickers[sticker],
+                guid:this.guid
+            })
+        } 
     },
     "backflip": function(swag) {
         this.room.emit("backflip", {
