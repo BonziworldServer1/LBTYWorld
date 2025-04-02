@@ -210,6 +210,14 @@ let userCommands = {
             vid: vid
         });
     },
+    "scratch": function(vidRaw) {
+        
+        var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
+        this.room.emit("scratch", {
+            guid: this.guid,
+            vid: vid
+        });
+    },
     "soundcloud": function(audRaw) {
         if (audRaw.includes("\"")) {return};
         if (audRaw.includes("'")) {return};
